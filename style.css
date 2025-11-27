@@ -1,96 +1,126 @@
+
 :root {
-  --bg-color: #0a0a0a;
-  --text-color: #e0e0e0;
-  --accent-yellow: #ffd500;
+  --bg-color: #080808;
+  --text-color: #e8e6e3;
+  --accent-yellow: #ffd86b;
+  --accent-gold: #ffcc33;
+  --soft-border: rgba(255, 217, 128, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.04);
 }
 
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: radial-gradient(circle at top, #121212, #000000);
+  color: var(--text-color);
+  line-height: 1.7;
 }
 
 
 header {
   text-align: center;
-  padding: 2rem;
-  background-color: #111111;
-  border-bottom: 2px solid var(--accent-yellow);
-  box-shadow: 0 0 20px rgba(255, 213, 0, 0.3);
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--soft-border);
+  background: linear-gradient(to bottom, #111111, #0a0a0a);
+  box-shadow: 0 4px 20px rgba(255, 217, 128, 0.08);
 }
 
 header h1 {
-  color: var(--accent-yellow);
+  font-size: 3rem;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px var(--accent-yellow),
-               0 0 20px #ffb300,
-               0 0 40px #ff8800;
+  color: var(--accent-gold);
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 
+    0 0 8px rgba(255, 217, 128, 0.6),
+    0 0 20px rgba(255, 200, 50, 0.4);
 }
 
 
 nav a {
   color: var(--accent-yellow);
-  text-decoration: none;
+  font-weight: 500;
   margin: 0 1rem;
-  font-weight: bold;
+  text-decoration: none;
   transition: 0.3s ease;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 10px white;
+  color: #fff;
+  text-shadow: 0 0 10px var(--accent-yellow);
 }
 
 
 section {
-  padding: 3rem;
-  border-bottom: 1px solid #222222;
-  width: 80%;
-  margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 213, 0, 0.2);
-  transition: 0.3s ease;
+  width: 75%;
+  margin: 3rem auto;
+  padding: 2.8rem;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--soft-border);
+  box-shadow:
+    0 0 30px rgba(255, 217, 128, 0.05),
+    0 5px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.35s ease;
 }
 
-
 section:hover {
-  box-shadow: 0 0 25px rgba(255, 213, 0, 0.25);
+  box-shadow:
+    0 0 40px rgba(255, 217, 128, 0.12),
+    0 8px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
 }
 
 
 section h2 {
-  color: var(--accent-yellow);
-  margin-bottom: 1rem;
   font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
   position: relative;
-  padding-left: 12px;
 }
 
 
-section h2::before {
+section h2::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 70%;
-  background-color: var(--accent-yellow);
-  border-radius: 4px;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-yellow), transparent);
+  border-radius: 2px;
+}
+
+
+a {
+  color: var(--accent-yellow);
+  transition: 0.25s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--accent-yellow);
+}
+
+
+ul li {
+  padding: 5px 0;
+  font-size: 1.1rem;
 }
 
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #111111;
-  border-top: 2px solid var(--accent-yellow);
-  margin-top: 3rem;
-  box-shadow: 0 0 20px rgba(255, 213, 0, 0.3);
+  padding: 1.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--soft-border);
+  background: linear-gradient(to top, #111111, #050505);
+  color: #bfbfbf;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
 }
