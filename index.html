@@ -4,7 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Josch Crisostomo Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+ 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .glow-title {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #00f;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #00f;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+    }
+
+    .section-box {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
+    }
+
+    /* Social Buttons */
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .social-btn.facebook {
+      background-color: #1877F2;
+      text-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 20px #1877F2;
+    }
+
+    .social-btn.instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      text-shadow: 0 0 5px #fd5949, 0 0 10px #d6249f, 0 0 20px #285AEB;
+    }
+
+    .social-btn.github {
+      background-color: #333;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(0,255,255,0.7), 0 0 30px rgba(0,255,255,0.5);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -37,11 +148,11 @@
     <h2 class="section-title">Contact</h2>
     <p>Email me at: <a href="mailto:aninojmc002374@gmail.com">aninojmc002374@gmail.com</a></p>
     <p>Or find me on social media:</p>
-    <ul>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/josch.crisostomo" target="_blank" rel="noopener noreferrer" class="social-btn facebook">Facebook</a>
+      <a href="https://www.instagram.com/hxnorablejo/" target="_blank" rel="noopener noreferrer" class="social-btn instagram">Instagram</a>
+      <a href="https://github.com/Joschcrisostomo" target="_blank" rel="noopener noreferrer" class="social-btn github">GitHub</a>
+    </div>
   </section>
 
   <footer>
