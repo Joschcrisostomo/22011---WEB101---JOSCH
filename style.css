@@ -1,8 +1,9 @@
 :root {
-  --bg-color: #0a0a0a;      
-  --text-color: #e0e0e0;    
-  --accent-yellow: #ffd500; 
+  --bg-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --accent-yellow: #ffd500;
 }
+
 
 body {
   background-color: var(--bg-color);
@@ -12,42 +13,84 @@ body {
   padding: 0;
 }
 
+
 header {
   text-align: center;
   padding: 2rem;
   background-color: #111111;
   border-bottom: 2px solid var(--accent-yellow);
+  box-shadow: 0 0 20px rgba(255, 213, 0, 0.3);
 }
 
 header h1 {
   color: var(--accent-yellow);
   margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px var(--accent-yellow),
+               0 0 20px #ffb300,
+               0 0 40px #ff8800;
 }
+
 
 nav a {
   color: var(--accent-yellow);
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   color: #ffffff;
+  text-shadow: 0 0 10px white;
 }
+
 
 section {
   padding: 3rem;
   border-bottom: 1px solid #222222;
+  width: 80%;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 213, 0, 0.2);
+  transition: 0.3s ease;
 }
+
+
+section:hover {
+  box-shadow: 0 0 25px rgba(255, 213, 0, 0.25);
+}
+
 
 section h2 {
   color: var(--accent-yellow);
   margin-bottom: 1rem;
+  font-size: 2rem;
+  position: relative;
+  padding-left: 12px;
 }
+
+
+section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 70%;
+  background-color: var(--accent-yellow);
+  border-radius: 4px;
+}
+
 
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #111111;
   border-top: 2px solid var(--accent-yellow);
+  margin-top: 3rem;
+  box-shadow: 0 0 20px rgba(255, 213, 0, 0.3);
 }
